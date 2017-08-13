@@ -9,18 +9,18 @@ import urllib.parse
 # read the request
 # print the request
 
-# url = 'https://pythonprogramming.net'
-# values = {'s':'basic',
-#           'submit':'search'}
-#
-# data = urllib.parse.urlencode(values)  #encode the values as they should be in URL, %20 for spaces
-# data = data.encode('utf-8')  #utf-8 just a type of encoding, puts it in bytes
-# req = urllib.request.Request(url,data)
-# resp = urllib.request.urlopen(req)
-# respData = resp.read()
-#
-# print(respData)
-#
+url = 'https://pythonprogramming.net'
+values = {'s':'basic',
+          'submit':'search'}
+
+data = urllib.parse.urlencode(values)  #encode the values as they should be in URL, %20 for spaces
+data = data.encode('utf-8')  #utf-8 just a type of encoding, puts it in bytes
+req = urllib.request.Request(url,data)
+resp = urllib.request.urlopen(req)
+respData = resp.read()
+
+print(respData)
+
 # websites will block your request if they read the headers
 # headers from regular python requests appear as python.urllib
 # fake the headers by overwriting them in the request
