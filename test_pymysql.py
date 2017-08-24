@@ -1,7 +1,7 @@
 import pymysql
 
 # host/server, user, password, database
-conn = pymysql.connect('localhost', 'root', '3510', 'beginnerwork')
+conn = pymysql.connect('localhost', 'root', '####', 'beginnerwork')
 cur = conn.cursor()
 
 # using variables for inserting into table
