@@ -1,26 +1,30 @@
-# #arguments
-# #setting up unlimited arguments with *
-# #going through arguments in a list as individual items
+# arguments or args
+# setting up unlimited arguments with *
+# can be thought of as lists but not really
+# going through arguments in a list as individual items
 
-# def Func(*args):
-	# for arg in args:
-		# print arg
+def Func(*args):
+	for arg in args:
+		print('Show me my argument:', arg)
 
-# l = [1,2,3,54,'ham']
-# Func(*l)
+sample = [1,2,3,54,'ham']
 
-# #keyword arguments
-# #setting defaults
-# def Func(x = 234, y = 9):
-	# print x, y
+print('\nRunning args function now\n')
+Func(*sample)
+print('\nArgs function complete\n')
 
-# Func(8, 15)
+# keyword arguments or kwargs
+# can be thought of as like dictionaries but not really
+# setting defaults
 
 def Func2(*args, **kwargs):
 	for arg in args:
-		print arg
-	for item in kwargs.items():
-		print item
+		print('Look at me, I am', arg)
+	for p_title, p_object in kwargs.items():
+		print(p_title, p_object)
 
-stuff = ['john','smith', 98]		
-Func2(*stuff, x=53, y=12, a=15, b='foobar')
+stuff = ['ramen','bento box', 42]
+
+print('Running kwargs function now\n')
+Func2(*stuff, x='kwarg1', y='kwarg2', a=35, b='kwarg4')
+print('\nKwargs function complete\n')
