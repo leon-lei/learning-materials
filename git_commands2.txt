@@ -1,0 +1,21 @@
+# push your local changes to the remote repo
+# remote repo named "origin"
+git push origin master
+
+# grab changes made to the remote repo
+git fetch origin
+
+# merge the changes pulled from the remote repo to your local repo
+git merge origin/master
+
+# show what branch you're currently in
+git branch
+
+# merge tool to resolve merge conflicts
+git mergetool --tool=emerge
+
+# create a new branch
+git checkout -b [BRANCH_NAME]
+
+# merge a local branch to local master
+git merge [BRANCH_NAME]
