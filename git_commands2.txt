@@ -1,3 +1,6 @@
+# list all remote repos
+git remote
+
 # push your local changes to the remote repo
 # remote repo named "origin"
 git push origin master
