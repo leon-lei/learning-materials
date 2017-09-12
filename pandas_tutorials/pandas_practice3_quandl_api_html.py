@@ -3,7 +3,7 @@ import pandas as pd
 
 # use the api key from the account to access a Freddie Mac database through quandl api
 # assign the dataset to a data frame for viewing
-api_key = 'ixQ8osz5dtLHpjnuWj51'
+api_key = ''
 df = quandl.get('FMAC/HPI_AK', authtoken=api_key)
 print(df.head())
 
