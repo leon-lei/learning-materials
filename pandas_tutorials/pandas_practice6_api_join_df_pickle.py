@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from matplotlib import style
 style.use('fivethirtyeight')
 
-api_key = 'ixQ8osz5dtLHpjnuWj51'
+api_key = ''
 
 def state_list():
     fiddy_states = pd.read_html('https://simple.wikipedia.org/wiki/List_of_U.S._states')
