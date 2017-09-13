@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 SHOW DATABASES;
 SHOW PROCESSLIST;
 SHOW TABLES;
@@ -29,5 +30,38 @@ UPDATE ham SET username='Sentdex' WHERE username='sentdex' LIMIT 2;
 # DELETE from table (top down order)
 DELETE FROM ham WHERE username='leonlei' LIMIT 1;
 
+=======
+SHOW DATABASES;
+SHOW PROCESSLIST;
+SHOW TABLES;
+CREATE database [database name];
+USE [database name];
+
+DESCRIBE [table name];
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| time     | int(13)      | YES  |     | NULL    |       |
+| username | varchar(20)  | YES  |     | NULL    |       |
+| tweet    | varchar(140) | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+
+
+# CREATE TABLE ham with COLUMNS time, username, and tweet
+CREATE TABLE ham (time int(13), username varchar(20),tweet varchar(140));
+
+# INSERT data into existing table
+INSERT INTO ham VALUES (15856582, "sentdex", "welcome to my tutorial");
+
+# Querying a table
+SELECT * FROM ham;
+
+# Updating a table with criteria and limit
+UPDATE ham SET username='Sentdex' WHERE username='sentdex' LIMIT 2;
+
+# DELETE from table (top down order)
+DELETE FROM ham WHERE username='leonlei' LIMIT 1;
+
+>>>>>>> origin/master
 # SELECT with criteria logic
 SELECT * FROM ham WHERE time > 15856582 AND time < 15856595;
