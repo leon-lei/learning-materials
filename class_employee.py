@@ -1,4 +1,3 @@
-#! python3
 # from youtube corey schafer
 
 import datetime
