@@ -134,7 +134,7 @@ ax.plot(x, x**2, color="blue", label='X Squared', marker='o', markersize=10,
 #############
 
 # Plot range and axes sizing
-fig, axes = plt.subplot(1, 3, figsize=(12,6))
+fig, axes = plt.subplots(1, 3, figsize=(12,6))
 
 axes[0].plot(x, x**2, x, x**3)
 axes[0].set_title("default axes ranges")
