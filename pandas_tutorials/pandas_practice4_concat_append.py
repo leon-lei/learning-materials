@@ -15,16 +15,23 @@ df3 = pd.DataFrame({'HPI':[80,85,88,85],
                     'Low_tier_HPI':[50, 52, 50, 53]},
                    index = [2001, 2002, 2003, 2004])
 
-# concat does not merge data, simply adds the data frames on top of each other
+# Concat does not merge data, simply adds the data frames on top of each other
 concat = pd.concat([df1, df2, df3])
 print(concat)
 
-# append will still not merge the data to share the same index
+# Append will still not merge the data to share the same index
 df4 = df1.append(df3)
 print(df4)
 
+# Merge will effectively combine both dataframes
+df_merged1 = pd.merge(df1,df3)    # Not specifying what to merge on will merge on intersection of columns
 
-# appends the series/row into the data frame
+df_merged2 = pd.merge(df1,df3,    # If you want to specify with the on=parameter, only pass in values that both dataframes share
+                      on=['HPI','Int_rate'])
+
+############
+
+# Appends the series/row into the data frame
 s = pd.Series([80, 2, 50], index = ['HPI', 'Int_rate', 'US_GDP_Thousands'])
 df5 = df1.append(s, ignore_index = True)
 print(df5)
