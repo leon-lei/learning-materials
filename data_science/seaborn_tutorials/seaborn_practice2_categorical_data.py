@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Categorical Plots
+
+# Data Set
 tips = sns.load_dataset('tips')
 # total_bill | tip | sex | smoker | day | time | size
 # 16.99 | 1.01 | Female | No | Sun | Dinner | 2
