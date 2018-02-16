@@ -1,28 +1,50 @@
-List of gitbash commands
+Git Commands
 
-cd ~
-cd ..
-ls
-pwd
-clear
-
-git init
-git config --global user.name "Leon Lei"
-git config --list
-git help commit
+# Basics
+git add .
+git add sample.txt
+git commit -m "initial commit"
+git commit -am "initial commit"
+git diff
 git log
 git status
-git diff
-    git diff --staged
-git add first.txt
-    git add .
-git commit -m "Message within here"
-    git commit -am "Updates the repo directly without having to add to Staging area"
 
-# renaming and moving files
+# Cloning an existing repo
+git clone https://github.com/leon-lei/learning-materials.git
+
+# Push and Pull
+git push origin master OR git push heroku master
+git pull origin master
+git fetch origin
+
+# Remote
+git remote -v
+git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
+
+# Renaming and moving files
 git rm first.txt
 git mv third.txt pudding.txt
 git mv third.txt lovenotes/puddingpie.txt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # unstage a file from the staging area
 git reset HEAD baddog.txt
@@ -35,15 +57,6 @@ git checkout -- bad_dog.txt
 # 01edf8b represent first few characters of the commit ID
 git checkout 01edf8b -- baddog.txt
 
-# list all remote repos
-git remote
-
-# push your local changes to the remote repo
-# remote repo named "origin"
-git push origin master
-
-# grab changes made to the remote repo
-git fetch origin
 
 # merge the changes pulled from the remote repo to your local repo
 git merge origin/master
