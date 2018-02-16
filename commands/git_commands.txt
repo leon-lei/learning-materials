@@ -1,5 +1,8 @@
 Git Commands
 
+# Not in alphabetical order
+# More of a usage flow
+
 # Basics
 git add .
 git add sample.txt
@@ -12,64 +15,42 @@ git status
 # Cloning an existing repo
 git clone https://github.com/leon-lei/learning-materials.git
 
-# Push and Pull
-git push origin master OR git push heroku master
-git pull origin master
-git fetch origin
-
 # Remote
 git remote -v
 git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
+
+# Push and Pull
+git push OR git push origin master
+git pull OR git pull origin master
+git fetch origin
+
+# Merge conflicts
+a = 1
+<<<<<<< HEAD
+b = 2
+=======
+b = 5
+>>>>>>> git hash 549842163168165161
+# Simply edit the code between the <<<< and >>>>> 
+# Then commit and push back into the repo to resolve
+
+# Reset
+git reset --hard <commit>
+git reset --hard origin/master   # reverts back to remote repo version
+
+# Branching
+git branch  # shows all current branches
+git branch <branch_name> # creates a new branch
+
+# Checkout
+git checkout <branch_name>
+git checkout -b <branch_name> # Creates and then switch over to new branch
+
+# Merge
+# If we were in the master branch and wanted to merge changes from the tests branch
+git merge tests   # possible to have merge conflicts, which you need to resolve
 
 # Renaming and moving files
 git rm first.txt
 git mv third.txt pudding.txt
 git mv third.txt lovenotes/puddingpie.txt
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# unstage a file from the staging area
-git reset HEAD baddog.txt
-
-# checkout the previous version of the file from the repository
-# must not have committed bad changes yet
-git checkout -- bad_dog.txt
-
-# if bad changes were committed, and you need to checkout an older version
-# 01edf8b represent first few characters of the commit ID
-git checkout 01edf8b -- baddog.txt
-
-
-# merge the changes pulled from the remote repo to your local repo
-git merge origin/master
-
-# show what branch you're currently in
-git branch
-
-# merge tool to resolve merge conflicts
-git mergetool --tool=emerge
-
-# create a new branch
-git checkout -b [BRANCH_NAME]
-
-# merge a local branch to local master
-git merge [BRANCH_NAME]
-
