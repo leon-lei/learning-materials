@@ -5,7 +5,7 @@ archive
 *.json
 *.log
 *.pickle
-*.txt
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
