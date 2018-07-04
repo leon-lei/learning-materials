@@ -38,6 +38,9 @@ Priority Queues
 	- Binary min-heap is a binary tree where the value of each node is at most the values of its children (parent < children)
 	
 Disjoint Sets
-- Maze problem with 2 points belonging to same set or not
-- Membership check
-- 
+- Maze problem with 2 elements belonging to same set or not
+- Membership check, Union
+- Trees for Disjoint Sets
+	- When merging trees, choose to create shallow resulting tree (smallest height) due to runtime advantage for Find()
+	- Hang the shorter one under the root of a taller one (adjust the pointer on the root of the shorter tree)
+		- AKA Union By Rank Heuristic
