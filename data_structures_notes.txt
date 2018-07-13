@@ -44,3 +44,16 @@ Disjoint Sets
 	- When merging trees, choose to create shallow resulting tree (smallest height) due to runtime advantage for Find()
 	- Hang the shorter one under the root of a taller one (adjust the pointer on the root of the shorter tree)
 		- AKA Union By Rank Heuristic
+
+- Hash Tables
+	- IPv4 (2^32) vs IPv6 (2^128)
+	- Access log problem
+		-Array
+			- Direct addressing scheme
+			- Each IP converted to own integer number that corresponds to a position in an array
+			- O(N) where N is size of universe. Not efficient with large universe
+			- Wasteful when there's only handful of active IP but you still need to create positions in array for all possible
+		-List
+			- Store only active IPs
+			- Store in a list sorted by time of access
+			- O(n) as you check each element in list
