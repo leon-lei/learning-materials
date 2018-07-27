@@ -1,6 +1,6 @@
+# Code being referenced from trevor payne youtube channel
+
 # Finite State Machine
-# Trevor Payne, Youtube
-# https://www.youtube.com/watch?v=E45v2dD3IQU&list=PL82YdDfxhWsC-3kdTKK2_mwbNdBfVvb_M&index=8
 
 # Lightblub example
 

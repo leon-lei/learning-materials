@@ -1,3 +1,5 @@
+# Code being referenced from trevor payne youtube channel
+
 from queue import PriorityQueue
 
 class State(object):
