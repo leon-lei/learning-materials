@@ -1,0 +1,27 @@
+Pipenv Commands
+
+# Not in alphabetical order
+# More of a pseudo-workflow
+
+# Installing specific versions of Python
+pipenv --python 3
+pipenv --python 3.6
+
+# Install specific versions of Packages
+pipenv install django==2.0.7
+
+# See path of virtual environment
+pipenv --venv
+
+# Graph of pkgs and dependencies
+pipenv graph
+
+# Activate virtual environment in subshell
+pipenv shell
+
+# Remove virtual environment
+pipenv --rm
+
+# Creating a new virtual environment from Pipfile and Pipfile.lock
+# Note this will destroy existing virtual environment in the directory
+pipenv install
