@@ -19,6 +19,9 @@ pipenv graph
 # Activate virtual environment in subshell
 pipenv shell
 
+# Run a program with pkgs from virtual environment
+pipenv run foobar.py
+
 # Remove virtual environment
 pipenv --rm
 
