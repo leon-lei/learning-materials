@@ -8,7 +8,7 @@
 ------------------------------------------------
 2. Initialize a git repository
     1. *git init*
-    2. *git add a.*
+    2. *git add .*
     3. *git commit -m "Messsage here"*
 
 ------------------------------------------------
@@ -32,7 +32,8 @@
 
 ------------------------------------------------
 6. Push local project into heroku
-        3. *git push heroku master*
-        4. *heroku run python manage.py makemigrations*
-        5. *heroku run python manage.py migrate*
-        6. *heroku run python manage.py createsuperuser*
+    1. *git push heroku master*
+    2. *heroku run python manage.py makemigrations*
+    3. *heroku run python manage.py migrate*
+    4. *heroku run python manage.py createsuperuser*
+    5. *heroku open*
