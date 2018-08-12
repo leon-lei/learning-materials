@@ -31,6 +31,14 @@ git branch  # shows all current branches
 git branch <branch_name> # creates a new branch
 git branch -d <branch_name> # deletes a branch
 
+# Stashing
+git add <new_file>
+git stash
+git checkout <another_branch>
+....
+git checkout <branch_with_stash>
+git stash apply # Grabs the new file stashed away before
+
 # Checkout
 git checkout <branch_name>
 git checkout -b <branch_name> # Creates and then switch over to new branch
@@ -59,7 +67,7 @@ git pull OR git pull origin master
 git push origin --delete <branch_name> # delete a branch on the remote repo
 
 # Reset
-git reset --hard <commit>
+git reset --hard <SHA>
 git reset --hard origin/master   # reverts back to remote repo version
 
 # Renaming and moving files
