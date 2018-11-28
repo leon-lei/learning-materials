@@ -18,6 +18,7 @@ git status
 git config --global user.name "Leon Lei"
 git config --global user.email "leonlei35t@gmail.com"
 git config --list
+git config --local
 
 # Help
 git help config
@@ -74,3 +75,6 @@ git reset --hard origin/master   # reverts back to remote repo version
 git rm first.txt
 git mv third.txt pudding.txt
 git mv third.txt lovenotes/puddingpie.txt
+
+# Useful alias with bash
+alias graph="git log --all --decorate --oneline --graph"
