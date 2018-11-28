@@ -90,71 +90,75 @@ class Manager(Employee):
         for emp in self.employees:
             print('-->', emp.fullname)
 
-#############################
 
-# standard create instances using arguments
-dev_1 = Developer('John', 'Doe', 10000, 'Python')
+def main():
+    # standard create instances using arguments
+    dev_1 = Developer('John', 'Doe', 10000, 'Python')
 
-# creates new instances of class Employee with classmethod
-emp_str1 = 'Jane-Sims-7000'
-emp_str2 = 'Rick-Lee-5000'
-emp_3 = Employee.from_string(emp_str1)
-emp_4 = Employee.from_string(emp_str2)
+    # creates new instances of class Employee with classmethod
+    emp_str1 = 'Jane-Sims-7000'
+    emp_str2 = 'Rick-Lee-5000'
+    emp_3 = Employee.from_string(emp_str1)
+    emp_4 = Employee.from_string(emp_str2)
 
-# create Manager class and add an associated employee
-mgr_1 = Manager('Morty', 'Link', 12000, [dev_1])
-print('Listing employee under Manager attribute')
-mgr_1.print_emps()
+    # create Manager class and add an associated employee
+    mgr_1 = Manager('Morty', 'Link', 12000, [dev_1])
+    print('Listing employee under Manager attribute')
+    mgr_1.print_emps()
 
-# use Manager methods to add/remove to the employees attribute
-print('\nAdding employees to Manager attribute')
-mgr_1.add_emp(emp_3)
-mgr_1.add_emp(emp_4)
-mgr_1.print_emps()
+    # use Manager methods to add/remove to the employees attribute
+    print('\nAdding employees to Manager attribute')
+    mgr_1.add_emp(emp_3)
+    mgr_1.add_emp(emp_4)
+    mgr_1.print_emps()
 
-print('\nRemoving employee from Manager attribute')
-mgr_1.remove_emp(dev_1)
-mgr_1.print_emps()
+    print('\nRemoving employee from Manager attribute')
+    mgr_1.remove_emp(dev_1)
+    mgr_1.print_emps()
 
-# special dunder methods
-print('\nDemonstrate special dunder methods')
-print('Dict', dev_1.__dict__)
-print('Str', dev_1.__str__())
+    # special dunder methods
+    print('\nDemonstrate special dunder methods')
+    print('Dict', dev_1.__dict__)
+    print('Str', dev_1.__str__())
 
-# dunder add method
-print('\nDemonstrate dunder add method')
-print(mgr_1 + dev_1)
+    # dunder add method
+    print('\nDemonstrate dunder add method')
+    print(mgr_1 + dev_1)
 
-# property decorator
-print('\nDemonstrate Property decorator')
-print(dev_1.first)
-print(dev_1.last)
-print(dev_1.email)
-dev_1.last = 'Riley'
+    # property decorator
+    print('\nDemonstrate Property decorator')
+    print(dev_1.first)
+    print(dev_1.last)
+    print(dev_1.email)
+    dev_1.last = 'Riley'
 
-print(dev_1.fullname)
-print(dev_1.email)
+    print(dev_1.fullname)
+    print(dev_1.email)
 
-# setter
-print('\nDemonstrate Setter')
-dev_1.fullname = 'Jonathan Doe'
-print('First name = ', dev_1.first)
-print('Last name = ', dev_1.last)
-print('Email = ', dev_1.email)
+    # setter
+    print('\nDemonstrate Setter')
+    dev_1.fullname = 'Jonathan Doe'
+    print('First name = ', dev_1.first)
+    print('Last name = ', dev_1.last)
+    print('Email = ', dev_1.email)
 
-# deleter
-print('\nDemonstrate Deleter')
-del dev_1.fullname
-print('First name = ', dev_1.first)
-print('Last name = ', dev_1.last)
+    # deleter
+    print('\nDemonstrate Deleter')
+    del dev_1.fullname
+    print('First name = ', dev_1.first)
+    print('Last name = ', dev_1.last)
 
-## Uses staticmethod
-# my_date = datetime.date(2017, 7, 6)
-# print(Employee.is_workday(my_date))
+    ## Uses staticmethod
+    # my_date = datetime.date(2017, 7, 6)
+    # print(Employee.is_workday(my_date))
 
-## More info on Developer class and inheritance
-# print(help(Developer))
+    ## More info on Developer class and inheritance
+    # print(help(Developer))
 
-## Methods to check on classes and instances
-# print(isinstance(mgr_1, Employee))
-# print(issubclass(Developer, Manager))
+    ## Methods to check on classes and instances
+    # print(isinstance(mgr_1, Employee))
+    # print(issubclass(Developer, Manager))
+
+
+if __name__ == '__main__':
+    main()
