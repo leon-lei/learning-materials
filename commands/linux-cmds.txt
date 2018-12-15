@@ -1,0 +1,17 @@
+Linux Command Line
+
+# Change ownership
+sudo chown root:llei file.txt
+
+# List regular and long listing
+ls or l
+ls -l
+
+# Updating and upgrading pkgs
+sudo apt-get update
+sudo apt-get dist-upgrade
+
+
+# Open with nano
+sudo nano ./
+sudo nano ./file.txt
