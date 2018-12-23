@@ -108,17 +108,23 @@ alias graph="git log --all --decorate --oneline --graph"
 ```
 
 ## Set up SSH Key on Github
+#### Generate an SSH Key
 ```
-# Generate an SSH Key
 # When prompted, save to default location and then enter passphrase
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
 
-# Add SSH Key to computer's SSH Agent
-eval "$(ssh-agent -s)"    # enable the SSH agent
+#### Add SSH Key to computer's SSH Agent
+```
+# enable the SSH agent
+eval "$(ssh-agent -s)"
 
-ssh-add ~/.ssh/id_rsa    # set the agent to use the key just generated
+# set the agent to use the key just generated
+ssh-add ~/.ssh/id_rsa
+```
 
-# Copy the SSH key and paste into Github
-# Command below for Linux
+#### Copy the SSH key and paste into Github
+```
+# Linux cmd
 xclip -sel clip < ~/.ssh/id_rsa.pub
 ```
