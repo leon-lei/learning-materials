@@ -54,7 +54,7 @@ INSERT INTO cats ( name, owner, birth) VALUES
 ```
 SELECT * FROM cats;
 
-SELECT name FROM cats WHERE owner = 'Casey';
+SELECT name FROM cats WHERE owner = 'Casey' LIMIT 2;
 ```
 
 ## Delete a record from a table
