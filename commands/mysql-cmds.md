@@ -44,7 +44,7 @@ DESCRIBE cats;
 
 ## Add records into a table
 ```
-INSERT INTO cats ( name, owner, birth) VALUES
+INSERT INTO cats (name, owner, birth) VALUES
   ( 'Sandy', 'Lennon', '2015-01-03' ),
   ( 'Cookie', 'Casey', '2013-11-13' ),
   ( 'Charlie', 'River', '2016-05-21' );
@@ -106,4 +106,17 @@ DESCRIBE cats;
 | owner | varchar(150)     | NO   |     | NULL    |                |
 | birth | date             | NO   |     | NULL    |                |
 +-------+------------------+------+-----+---------+----------------+
+```
+
+## Delete Database and Table
+```
+DROP TABLE cats;
+
+DROP DATABASE pets;
+```
+
+## Truncate
+* Deletes all data in table and resets AUTO_INCREMENT to 0
+```
+TRUNCATE TABLE cats;
 ```
