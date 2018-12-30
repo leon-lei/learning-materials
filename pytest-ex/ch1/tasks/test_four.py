@@ -1,5 +1,6 @@
 '''Test the Task data type'''
 import pytest
+import time
 
 from collections import namedtuple
 
@@ -26,5 +27,5 @@ def test_replace():
     t_before = Task('finish book', 'brian', False)
     t_after = t_before._replace(id=10, done=True)
     t_expected = Task('finish book', 'brian', True, 11)
-
+    time.sleep(0.1)    # to demonstrate --duration flag on cmd line
     assert t_after == t_expected

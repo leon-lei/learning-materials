@@ -12,6 +12,10 @@ pytest -v tasks/test_four.py::test_asdict
 # Collect only
 $ pytest --collect-only
 
+# Duration
+# Reports the slowest N number of test/setups/teardowns after the tests run
+$ pytest --durations=3
+
 # Expressions
 $ pytest -k 'asdict or defaults'
 
@@ -46,5 +50,11 @@ $ pytest --ff
 # max fails
 $ pytest --maxfail=2
 ######################################################
+```
 
+## See all available fixtures or markers
+```
+$ pytest --fixtures
+
+$ pytest --markers
 ```
