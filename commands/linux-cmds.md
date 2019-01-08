@@ -12,6 +12,11 @@ $ sudo chown root:llei file.txt
 $ sudo chmod 664 file.txt
 ```
 
+## Copy a file
+```
+$ cp file.doc newfile.doc
+```
+
 ## Info about installed pkgs
 ```
 $ apt-cache policy gimp
