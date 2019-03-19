@@ -78,6 +78,7 @@ with my_context_manager():
 
 
 # rewrite earlier example
+# must re-raise exceptions
 @contextmanager
 def FoodContextManager3(data):
     print(f'Enter {data}')
@@ -89,6 +90,7 @@ with FoodContextManager3({'dairy': 'yuck'}) as data:
 
 
 ################### Exceptions in __exit__ ###################
+# do not re-raise exceptions in __exit__ methods 
 class MyContextManager2:
     
     def __exit__(self, exc_type, exc, exc_tb):
@@ -98,6 +100,7 @@ class MyContextManager2:
             # return False    # happens implicitly
 
 
+# class ignores exceptions specified in init method
 class suppress:
     def __init__(self, *exceptions):
         self.exceptions = exceptions
