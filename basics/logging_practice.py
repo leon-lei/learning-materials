@@ -59,10 +59,10 @@ with open('logging_config.yaml', 'r') as f:
 logger = logging.getLogger(__name__)
 
 # Should not be written into errors.log
-logging.debug('This is an debug message')
-logging.info('This is an info message')
-logging.warning('This is a warning')
+logger.debug('This is an debug message')
+logger.info('This is an info message')
+logger.warning('This is a warning')
 
 # Should be written into errors.log
-logging.error('This is a error message')
-logging.critical('This is a critical message')
+logger.error('This is a error message')
+logger.critical('This is a critical message')
