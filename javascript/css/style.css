@@ -1,0 +1,41 @@
+.closed {
+    display: none;
+}
+
+.open {
+    display: block;
+}
+
+button {
+    background-color: #D40078;
+    color: #2DE2E6;
+    font-size: 18px;
+    width: 150px;
+    height: 40px;
+}
+
+p {
+    background-color: #023788;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+#fruits {
+    background-color: #920075;
+    font-size: 40px;
+    height: 100px;
+    text-align: center;
+}
+#stuff {
+    background-color: #FF3864;
+}
+
+#message {
+    background-color: #650D89;
+    color: #F6019Df;
+    font-size: 80px;
+    height: 100px;
+    text-align: center;
+}

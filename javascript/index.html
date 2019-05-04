@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="script.js"></script>
+    <title>JS Practice</title>
+</head>
+<body onload="loadFruits()">
+    <h1>Events</h1>
+    <hr>
+    <h2>Modify the DOM</h2>
+    <button onclick="document.getElementById('stuff').innerHTML='Clicked First Button';">First</button>
+    <button onclick="document.getElementById('stuff').innerHTML='Clicked Second Button';">Second</button>
+    <p>This code shouldn't change</p>
+    <p id="stuff">This will change</p>
+    <p>This shouldn't change either</p>
+    <hr>
+    <h2>Functions</h2>
+    <button onclick="openMe()">Open!</button>
+    <button onclick="closeMe()">Close!</button>
+    <p id="demo">This paragraph can be opened and closed by
+        the buttons above
+    </p>
+    <hr>
+    <h2>OnMouse and "this" example</h2>
+    <h2 id="message">Message</h2>
+    
+    <img src="https://images.pexels.com/photos/884600/pexels-photo-884600.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    alt="ramen" id="ID-1" height="300" width="300" 
+    onclick="displayId(this)"
+    onmouseover = "showProperties(this)">
+    
+    <img src="https://images.pexels.com/photos/1881336/pexels-photo-1881336.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    alt="steak" id="ID-2" height="300" width="300"
+    onclick="displayId(this)"
+    onmouseover = "showProperties(this)">
+    
+    <img src="https://images.pexels.com/photos/2092507/pexels-photo-2092507.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    alt="tacos" id="ID-3" height="300" width="300"
+    onclick="displayId(this)"
+    onmouseover="showProperties(this)">
+    
+    <hr>
+    <h2>Arrays</h2>
+    <button onclick="myFunction()">Add Your Favorite!</button>
+    <p id="fruits"></p>
+</body>
+</html>
