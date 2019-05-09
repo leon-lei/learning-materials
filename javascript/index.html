@@ -47,5 +47,43 @@
     <h2>Arrays</h2>
     <button onclick="myFunction()">Add Your Favorite!</button>
     <p id="fruits"></p>
+
+    <hr>
+    <h2>Forms</h2>
+    <!-- novalidate form attribute overwrites the input required attribute -->
+    <!-- <form novalidate>     -->
+    <form>    
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Foobar" required><br>
+        <label>Email: <input type="email" name="email" placeholder="foobar@example.com"></label><br>
+        <label>Password: <input type="password" name="password"></label><br>
+        <label for="radio">Radio Buttons</label><br>
+        <input type="radio" name="gender" value="Male" checked>Male<br>
+        <input type="radio" name="gender" value="Female">Female<br>
+        <label for="checkbox">Checkboxes</label><br>
+        <input type="checkbox" name="preference" value="email">Contact me via email<br>
+        <input type="checkbox" name="preference" value="phone">Contact me via phone<br>
+        <label>Number: <input type="number" placeholder="123-456-7890"></label><br>
+        <label>Zip Code Pattern: <input type="text" name="zip_codeP" pattern="[0-9]{5}" required></label><br>
+        <label>Range: <input type="range"></label><br>
+        <label>Color: <input type="color"></label><br>
+        <label>URL: <input type="url" placeholder="https://www.foo.com"></label><br>
+        <label>Date: <input type="date" id="birth" value="birth"></label><br>
+        <input type="submit" value="Click here">
+    </form>
+
+    <hr>
+    <h2>Validating Inputs</h2>
+    <form>
+        <label>Preferred email address:
+            <input type="email" id="email_addr" name="email1" value= "me@me.com" required>
+        </label><br>
+        <label>Repeat email address:
+            <input type="email" id="email_repeat" name="email2" required onchange="check()">
+        </label><br>
+        <input type="submit" value="Confirm Emails" onclick="return check();">     <!--Stops form from submitting if return false-->
+    </form>
+
+
 </body>
 </html>

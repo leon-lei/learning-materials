@@ -34,3 +34,15 @@ function myFunction(){
     document.getElementById("fruits").innerHTML = fruits;
 
 }
+
+function check(){
+    let email1 = document.getElementById('email_addr');
+    let email2 = document.getElementById('email_repeat');
+    if (email1.value != email2.value){
+        alert("The two emails must match!");
+        return false;
+    } else{
+        alert("Emails matched!");
+        return true;
+    }
+}
