@@ -1,89 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script type="text/javascript" src="script.js"></script>
-    <title>JS Practice</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script type="text/javascript" src="script.js"></script>
+  <title>JS Practice</title>
 </head>
 <body onload="loadFruits()">
-    <h1>Events</h1>
-    <hr>
-    <h2>Modify the DOM</h2>
-    <button onclick="document.getElementById('stuff').innerHTML='Clicked First Button';">First</button>
-    <button onclick="document.getElementById('stuff').innerHTML='Clicked Second Button';">Second</button>
-    <p>This code shouldn't change</p>
-    <p id="stuff">This will change</p>
-    <p>This shouldn't change either</p>
-    <hr>
-    <h2>Functions</h2>
-    <button onclick="openMe()">Open!</button>
-    <button onclick="closeMe()">Close!</button>
-    <p id="demo">This paragraph can be opened and closed by
-        the buttons above
-    </p>
-    <hr>
-    <h2>OnMouse and "this" example</h2>
-    <h2 id="message">Message</h2>
-    
-    <img src="https://images.pexels.com/photos/884600/pexels-photo-884600.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-    alt="ramen" id="ID-1" height="300" width="300" 
-    onclick="displayId(this)"
-    onmouseover = "showProperties(this)">
-    
-    <img src="https://images.pexels.com/photos/1881336/pexels-photo-1881336.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-    alt="steak" id="ID-2" height="300" width="300"
-    onclick="displayId(this)"
-    onmouseover = "showProperties(this)">
-    
-    <img src="https://images.pexels.com/photos/2092507/pexels-photo-2092507.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-    alt="tacos" id="ID-3" height="300" width="300"
-    onclick="displayId(this)"
-    onmouseover="showProperties(this)">
-    
-    <hr>
-    <h2>Arrays</h2>
-    <button onclick="myFunction()">Add Your Favorite!</button>
-    <p id="fruits"></p>
+  <h1>Events</h1>
+  <hr>
+  <h2>Modify the DOM</h2>
+  <button onclick="document.getElementById('stuff').innerHTML='Clicked First Button';">First</button>
+  <button onclick="document.getElementById('stuff').innerHTML='Clicked Second Button';">Second</button>
+  <p>This code shouldn't change</p>
+  <p id="stuff">This will change</p>
+  <p>This shouldn't change either</p>
+  <hr>
+  <h2>Functions</h2>
+  <button onclick="openMe()">Open!</button>
+  <button onclick="closeMe()">Close!</button>
+  <p id="demo">This paragraph can be opened and closed by
+    the buttons above
+  </p>
+  <hr>
+  <h2>OnMouse and "this" example</h2>
+  <h2 id="message">Message</h2>
 
-    <hr>
-    <h2>Forms</h2>
-    <!-- novalidate form attribute overwrites the input required attribute -->
-    <!-- <form novalidate>     -->
-    <form>    
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Foobar" required><br>
-        <label>Email: <input type="email" name="email" placeholder="foobar@example.com"></label><br>
-        <label>Password: <input type="password" name="password"></label><br>
-        <label for="radio">Radio Buttons</label><br>
-        <input type="radio" name="gender" value="Male" checked>Male<br>
-        <input type="radio" name="gender" value="Female">Female<br>
-        <label for="checkbox">Checkboxes</label><br>
-        <input type="checkbox" name="preference" value="email">Contact me via email<br>
-        <input type="checkbox" name="preference" value="phone">Contact me via phone<br>
-        <label>Number: <input type="number" placeholder="123-456-7890"></label><br>
-        <label>Zip Code Pattern: <input type="text" name="zip_codeP" pattern="[0-9]{5}" required></label><br>
-        <label>Range: <input type="range"></label><br>
-        <label>Color: <input type="color"></label><br>
-        <label>URL: <input type="url" placeholder="https://www.foo.com"></label><br>
-        <label>Date: <input type="date" id="birth" value="birth"></label><br>
-        <input type="submit" value="Click here">
-    </form>
+  <img src="https://images.pexels.com/photos/884600/pexels-photo-884600.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+  alt="ramen" id="ID-1" height="300" width="300" 
+  onclick="displayId(this)"
+  onmouseover = "showProperties(this)">
 
-    <hr>
-    <h2>Validating Inputs</h2>
-    <form>
-        <label>Preferred email address:
-            <input type="email" id="email_addr" name="email1" value= "me@me.com" required>
-        </label><br>
-        <label>Repeat email address:
-            <input type="email" id="email_repeat" name="email2" required onchange="check()">
-        </label><br>
-        <input type="submit" value="Confirm Emails" onclick="return check();">     <!--Stops form from submitting if return false-->
-    </form>
+  <img src="https://images.pexels.com/photos/1881336/pexels-photo-1881336.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+  alt="steak" id="ID-2" height="300" width="300"
+  onclick="displayId(this)"
+  onmouseover = "showProperties(this)">
 
+  <img src="https://images.pexels.com/photos/2092507/pexels-photo-2092507.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+  alt="tacos" id="ID-3" height="300" width="300"
+  onclick="displayId(this)"
+  onmouseover="showProperties(this)">
+
+  <hr>
+  <h2>Arrays</h2>
+  <button onclick="myFunction()">Add Your Favorite!</button>
+  <p id="fruits"></p>
+
+  <hr>
+  <h2>Forms</h2>
+  <!-- novalidate form attribute overwrites the input required attribute -->
+  <!-- <form novalidate>     -->
+  <form>    
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Foobar" required><br>
+    <label>Email: <input type="email" name="email" placeholder="foobar@example.com"></label><br>
+    <label>Password: <input type="password" name="password"></label><br>
+    <label for="radio">Radio Buttons</label><br>
+    <input type="radio" name="gender" value="Male" checked>Male<br>
+    <input type="radio" name="gender" value="Female">Female<br>
+    <label for="checkbox">Checkboxes</label><br>
+    <input type="checkbox" name="preference" value="email">Contact me via email<br>
+    <input type="checkbox" name="preference" value="phone">Contact me via phone<br>
+    <label>Number: <input type="number" placeholder="123-456-7890"></label><br>
+    <label>Zip Code Pattern: <input type="text" name="zip_codeP" pattern="[0-9]{5}" required></label><br>
+    <label>Range: <input type="range"></label><br>
+    <label>Color: <input type="color"></label><br>
+    <label>URL: <input type="url" placeholder="https://www.foo.com"></label><br>
+    <label>Date: <input type="date" id="birth" value="birth"></label><br>
+    <input type="submit" value="Click here">
+  </form>
+
+  <hr>
+  <h2>Validating Inputs</h2>
+  <form>
+    <label>Preferred email address:
+        <input type="email" id="email_addr" name="email1" value= "me@me.com" required>
+    </label><br>
+    <label>Repeat email address:
+        <input type="email" id="email_repeat" name="email2" required onchange="check()">
+    </label><br>
+    <!--Stops form from submitting if check() returns false-->
+    <input type="submit" value="Confirm Emails" onclick="return check();">
+  </form>
+
+  <hr>
+  <h2>Easy Checkboxes</h2>
+  <form>
+    <!-- Wrap in label tag so users can click on text to activate checkbox -->
+    <!-- name attribute groups checkboxes together -->
+    <label><input type="checkbox" name="food" value="Pizza">Pizza</label><br>
+    <label><input type="checkbox" name="food" value="Chips">Chips</label><br>
+    <label><input type="checkbox" name="food" value="Kale" checked="true">Kale</label><br>
+    <input type="submit">
+  </form>
+  <br>
+  <form>
+  <fieldset>
+    <label for="fname">First Name:</label>
+    <input type="text" name="fName" id="fName" required><br>
+    <label for="lname">Last Name:</label>
+    <input type="text" name="lName" id="lName" required><br>
+    <label for="yesNick">Nickname?:</label>
+    <input id="yesNick" name="yesNick" type="checkbox" value="yes" onchange="nicknameFunction()"><br>
+    
+    <div id="nick">
+      <label for="nickname">Nickname</label>
+      <input type="text" name="nickname" id="nickname"><br>
+    </div>
+    <input type="submit" value="Verify">
+  </fieldset>
+  </form>
 
 </body>
 </html>
