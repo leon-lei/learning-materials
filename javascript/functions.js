@@ -58,6 +58,4 @@ people.forEach(logPerson);
 const ul = document.querySelector('.people');
 let html = ``;
 people.forEach(person => html += `<li style="color: purple">${person}</li>`);
-
-
 ul.innerHTML = html;
