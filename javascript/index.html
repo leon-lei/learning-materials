@@ -13,7 +13,8 @@
   <h2>Modify the DOM</h2>
   <button onclick="document.getElementById('stuff').innerHTML='Clicked First Button';">First</button>
   <button onclick="document.getElementById('stuff').innerHTML='Clicked Second Button';">Second</button>
-  <p>This code shouldn't change</p>
+  <p class="first">This code shouldn't change</p>
+  <div class="first">A div with class first</div>
   <p id="stuff">This will change</p>
   <p>This shouldn't change either</p>
   <hr>
@@ -115,10 +116,22 @@
   <h1>Functions</h1>
   <ul class="people"></ul>
 
+  <h3>Updating class</h3>
+
+  <h4><span style="display: none;">error</span> hidden lorem ipsum</h4>
+  <h4>lorem success ipsum</h4>
+  <h4>lorem lor ipsum</h4>
+  <h4>error lorem ipsum</h4>
+  <h4>lorem success</h4>
+  <h4>lorem ipsum</h4>
+
+  <div class="toggleMe">Toggling a class</div>
+
   <script type="text/javascript" src="script.js"></script>
   <!-- <script type="text/javascript" src="datatypes.js"></script> -->
   <!-- <script type="text/javascript" src="controlflow.js"></script> -->
   <!-- <script type="text/javascript" src="functions.js"></script> -->
-  <script type="text/javascript" src="objects.js"></script>
+  <!-- <script type="text/javascript" src="objects.js"></script> -->
+  <script type="text/javascript" src="dom.js"></script>
 </body>
 </html>
