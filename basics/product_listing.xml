@@ -1,0 +1,8 @@
+<productListing title="Python Products">
+    <product>
+        <name>Python Hoodie</name>
+        <description>Code warm and fuzzy</description>
+        <cost>23.99</cost>
+        <shipping>1.99</shipping>
+    </product>
+<product id="4"><name>Shio Ramen</name><description>Straight noodles with garlicky broth</description><cost>10.99</cost><shipping>2.99</shipping></product>
